@@ -2,7 +2,7 @@ const baseUrl = "https://kodekloud.com";
 const wistiaIframeBaseUrl = "https://fast.wistia.net/embed/iframe/";
 const getNumber = (index) => (index < 10 ? "0" + index : index.toString());
 
-const countVideos = $("li.section-item .fa-youtube-play").length;
+const countVideos = $("li.section-item use[*|href='#icon__Video']").length;
 let courseLinks = [];
 let countVideoParsed = 0;
 let parseCompleted = false;
@@ -48,7 +48,7 @@ $(".course-sidebar")
     };
 
     //console.log(lecture);
-    if ($(this).find(".fa-youtube-play").length > 0) {
+    if ($(this).find("use[*|href='#icon__Video']").length > 0) {
       var url = $(this).attr("data-lecture-url") || null;
       if (url) {
         // console.log("--> get download link", number);
