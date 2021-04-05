@@ -1,9 +1,9 @@
 # STEP BY STEP ON LOCAL
-Extract list of *.mp4 files from downloaded .txt file
+- Extract list of *.mp4 files from downloaded .txt file
 `grep -Eo "https?://\S+?\.mp4" "[original_file].txt" > "[extracted_file].txt"`
-Download all 
+- Download all 
 `wget -i [extracted_file].txt`
-Update links of mp4 files from [original_downloaded_file].html to use downloaded mp4 files on local
+- Update links of mp4 files from [original_downloaded_file].html to use downloaded mp4 files on local
 
 # KodeKloud Downloader Chrome Extension
 
